@@ -8,5 +8,5 @@ class Restaurant < ApplicationRecord
 
   # Array in Capital letters = create a constant that will be
   # available outside the model - in the html view files
-  # CATEGORIES = ['chinese', 'italian', 'japanese', 'french', 'belgian']
+  CATEGORIES = ['chinese', 'italian', 'japanese', 'french', 'belgian']
 end

@@ -1,0 +1,24 @@
+<h1>Welcome to <%= @restaurant.name %>'s page</h1>
+
+<h2>Address:</h2>
+<p><%= @restaurant.address %></p>
+
+<h2>Phone Number:</h2>
+<p><%= @restaurant.phone_number %></p>
+
+<h2>Category:</h2>
+<p><%= @restaurant.category %></p>
+
+<!-- Display the reviews on the restaurant instance -->
+<h2>Review:</h2>
+<ul>
+  <% @restaurant.reviews.each do |review| %>
+  <li><%= review.content %></li>
+  <li><%= review.rating %></li>
+  <% end %>
+</ul>
+
+<!-- Like in this example, we need to pass a parameter of instance of restaurant, as we need the id of the restaurant to link -->
+<%= link_to 'Add a review', new_restaurant_review_path(@restaurant) %>
+<!-- A link to go back to index -->
+<%= link_to 'Go back', restaurants_path %>
